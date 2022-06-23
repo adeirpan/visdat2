@@ -80,7 +80,7 @@ def update_feature(attr, old, new):
     new_src = make_dataset(lokasi_plot, feature)
 
     src.data.update(new_src.data)
-    
+
 lokasi_selection = CheckboxGroup(labels=lokasi, active = [0])
 lokasi_selection.on_change('active', update_country)
 
@@ -109,6 +109,8 @@ curdoc().add_root(layout)
 
 
 #=============================================================
+data2 = pd.read_csv("./data/covid_19_indonesia_time_series_all.csv")
+df2 = data[['continent','location','date','total_cases','new_cases','total_deaths','new_deaths']]
 df2['total_cases'].fillna(0,inplace=True)
 df2['new_cases'].fillna(0,inplace=True)
 df2['total_deaths'].fillna(0,inplace=True)
