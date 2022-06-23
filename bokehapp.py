@@ -24,7 +24,7 @@ from bokeh.layouts import row, widgetbox
 # In[3]:
 
 
-data = pd.read_csv("Covid19_dataset.csv",parse_dates=['date'])
+data = pd.read_csv("covid_19_indonesia_time_series_all.csv",parse_dates=['date'])
 
 
 # In[4]:
